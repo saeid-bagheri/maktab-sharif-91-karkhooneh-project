@@ -1,0 +1,12 @@
+﻿https://learn.microsoft.com/en-us/ef/core/managing-schemas/scaffolding/?tabs=vs
+
+
+Install-Package Microsoft.EntityFrameworkCore.Design
+Install-Package Microsoft.EntityFrameworkCore.Tools
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+
+
+Note : Make sure App.EndPoints.TempProject.ScaffoldDb is Set as startup
+
+
+Scaffold-DbContext "Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=KarKhoonehDb" -Context AppDbContext -ContextDir Database -OutputDir Entities  Microsoft.EntityFrameworkCore.SqlServer

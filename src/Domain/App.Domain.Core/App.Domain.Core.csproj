@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="AppServices\Experts\" />
+    <Folder Include="DtoModels\Experts\" />
   </ItemGroup>
 
 </Project>
