@@ -1,7 +1,7 @@
 ﻿using App.Domain.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace App.Infrastructures.Db.SqlServer.Ef;
+namespace App.Infrastructures.Db.SqlServer.Ef.Database;
 
 public partial class AppDbContext : DbContext
 {
