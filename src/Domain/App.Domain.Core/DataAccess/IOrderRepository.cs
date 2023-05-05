@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace App.Domain.Core.AppServices.Customers.Queries
+namespace App.Domain.Core.DataAccess
 {
-    public interface IGetOrdersDetailsAppService
+    public interface IOrderRepository
     {
-        List<OrderDetailsOutputModel> Execute(int customerId);
+        List<OrderDetailsOutputModel> GetListOfOrderDetails(int customerId);
     }
 }

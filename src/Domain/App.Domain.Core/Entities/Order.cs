@@ -22,13 +22,13 @@ public partial class Order
 
     public DateTime? ExpertFinishedWorkAt { get; set; }
 
-    public int? ScoreByExpertId { get; set; }
+    public int? ScoreByAcceptedExpertId { get; set; }
 
     public int? ScoreByCustomerId { get; set; }
 
     public DateTime? CreatedAt { get; set; }
 
-    public int? CreatedBy { get; set; }
+    public int CreatedBy { get; set; }
 
     public DateTime? LastModifiedAt { get; set; }
 

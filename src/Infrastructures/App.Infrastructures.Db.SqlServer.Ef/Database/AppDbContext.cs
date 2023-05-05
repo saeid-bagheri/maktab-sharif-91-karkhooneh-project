@@ -168,7 +168,7 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.Title).HasMaxLength(250);
 
             entity.HasOne(d => d.Parent).WithMany(p => p.Services)
-                .HasForeignKey(d => d.ParentId)
+                .HasForeignKey(d => d.CategoryId)
                 .HasConstraintName("FK_Services_ServiceCategories");
         });
 
