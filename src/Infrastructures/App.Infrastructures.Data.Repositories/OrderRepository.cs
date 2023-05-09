@@ -17,22 +17,22 @@ namespace App.Infrastructures.Data.Repositories
         public List<OrderDetailsOutputModel> GetListOfOrderDetails(int customerId)
         {
             return _appDbContext.Orders
-                .Where(w=>w.CustomerId== customerId)
+                .Where(w => w.CustomerId == customerId)
                 .Select(s => new OrderDetailsOutputModel
-            {
-                AcceptedExpertId = s.AcceptedExpertId,
-                AvailabilityTo = s.AvailabilityTo,
-                CreatedAt = s.CreatedAt,
-                CreatedByUserId = s.CreatedBy,
-                CustomerAddressId = s.CustomerAddressId,
-                ExpertFinishedWorkAt = s.ExpertFinishedWorkAt,
-                ExpertStartedWorkAt = s.ExpertStartedWorkAt,
-                LastModifiedAt = s.LastModifiedAt,
-                //ListOfServiceIds = 
-                ScoreByCustomerId = s.ScoreByCustomerId,
-                ScoreByExpertId = s.ScoreByExpertId,
-                ServiceCategoryId = s.ServiceCategoryId,
-            }).ToList();
+                {
+                    AcceptedExpertId = s.AcceptedExpertId,
+                    AvailabilityTo = s.AvailabilityTo,
+                    CreatedAt = s.CreatedAt,
+                    CreatedByUserId = s.CreatedBy,
+                    CustomerAddressId = s.CustomerAddressId,
+                    ExpertFinishedWorkAt = s.ExpertFinishedWorkAt,
+                    ExpertStartedWorkAt = s.ExpertStartedWorkAt,
+                    LastModifiedAt = s.LastModifiedAt,
+                    //ListOfServiceIds = 
+                    ScoreByCustomerId = s.ScoreByCustomerId,
+                    ScoreByExpertId = s.AcceptedExpertId,
+                    ServiceCategoryId = s.ServiceCategoryId,
+                }).ToList();
         }
     }
 }

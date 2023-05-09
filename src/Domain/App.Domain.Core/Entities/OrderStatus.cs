@@ -1,6 +1,6 @@
 ﻿namespace App.Domain.Core.Entities;
 
-public partial class OrderStatue
+public partial class OrderStatus
 {
     public int Id { get; set; }
 

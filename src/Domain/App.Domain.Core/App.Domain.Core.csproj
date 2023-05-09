@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="AppServices\Experts\" />
+    <Folder Include="AppServices\Experts\Commands\" />
+    <Folder Include="AppServices\Experts\Queries\" />
     <Folder Include="DtoModels\Experts\" />
   </ItemGroup>
 

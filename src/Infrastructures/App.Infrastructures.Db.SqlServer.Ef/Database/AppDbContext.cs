@@ -32,7 +32,7 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<OrderService> OrderServices { get; set; }
 
-    public virtual DbSet<OrderStatue> OrderStatues { get; set; }
+    public virtual DbSet<OrderStatus> OrderStatues { get; set; }
 
     public virtual DbSet<Service> Services { get; set; }
 
@@ -44,7 +44,7 @@ public partial class AppDbContext : DbContext
     /// <param name="optionsBuilder"></param>
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB; Initial Catalog=KarKhoonehDb");
+        => optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=db_Karkhooneh;Trusted_Connection=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -157,7 +157,7 @@ public partial class AppDbContext : DbContext
                 .HasConstraintName("FK_OrderServices_Services");
         });
 
-        modelBuilder.Entity<OrderStatue>(entity =>
+        modelBuilder.Entity<OrderStatus>(entity =>
         {
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Title).HasMaxLength(250);
