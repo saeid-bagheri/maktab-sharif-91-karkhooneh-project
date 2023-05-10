@@ -9,6 +9,6 @@ namespace App.Domain.Core.AppServices.Customers.Commands
 {
     public class IEditCustomerProfileAppService
     {
-        int Execute(EditCustomerInputModel model);
+        //int Execute(EditCustomerInputModel model);
     }
 }

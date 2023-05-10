@@ -21,12 +21,11 @@ namespace App.Domain.AppService.Customers.Commands
         public int Execute(AddOrderInputModel model)
         {
             // step-1 : add new order to orders
-            int orderId = _customerRepository.AddOrder(model);
-
             // step-2 : get list of services and add to OrderService
+            // step-3 : set order status to WaitingExpertAdvice
 
 
-
+            int orderId = _customerRepository.AddOrder(model);
             return orderId;
         }
     }

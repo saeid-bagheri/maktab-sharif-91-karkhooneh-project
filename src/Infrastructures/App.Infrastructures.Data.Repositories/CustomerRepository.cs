@@ -23,15 +23,7 @@ namespace App.Infrastructures.Data.Repositories
         public int AddOrder(AddOrderInputModel model)
         {
 
-            //var x = new List<OrderService>();
-            //foreach (var item in model.ListOfServiceIds)
-            //{
-            //    x.Add(new OrderService
-            //    {
-            //        ServiceId = item,
 
-            //    })
-            //}
 
             var newOrder = new Order()
             {
@@ -46,10 +38,22 @@ namespace App.Infrastructures.Data.Repositories
             };
             _appDbContext.Orders.Add(newOrder);
             _appDbContext.SaveChanges();
+
+
+            //add order services
+            foreach (var item in model.ListOfServiceIds)
+            {
+                _appDbContext.OrderServices.Add(new OrderService
+                {
+                    ServiceId = item,
+                    OrderId = newOrder.Id,
+                    CreatedAt = DateTime.Now,
+                    CreatedBy = model.CreatedByUserId,
+                });
+            }
+
+            _appDbContext.SaveChanges();
             return newOrder.Id;
-
-
-
 
         }
     }
