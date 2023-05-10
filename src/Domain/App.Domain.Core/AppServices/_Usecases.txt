@@ -6,8 +6,8 @@ ILogoutAppService (Commands)
 
 (Customers)
 IRegisterCustomerProfileAppService
-IEditCustomerProfileAppService (Commands)
-IAddAddressAppService (Commands)
+IEditCustomerProfileAppService (Commands) --- Done
+IAddAddressAppService (Commands) --- 
 IAddOrderAppService (Commands)
 IGetListOfOrderDetailsAppService (Queries)
 IAcceptBidAppService (Commands)

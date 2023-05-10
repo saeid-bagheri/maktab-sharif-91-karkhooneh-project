@@ -20,11 +20,9 @@ namespace App.Infrastructures.Data.Repositories
             _appDbContext = appDbContext;
         }
 
+
         public int AddOrder(AddOrderInputModel model)
         {
-
-
-
             var newOrder = new Order()
             {
                 CustomerId = model.CustomerId,
@@ -56,5 +54,13 @@ namespace App.Infrastructures.Data.Repositories
             return newOrder.Id;
 
         }
+
+
+        public int AddAddress(AddAddressInputModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
 }

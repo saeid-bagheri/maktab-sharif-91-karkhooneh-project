@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace App.Domain.Core.AppServices.Customers.Commands
 {
-    public interface IEditCustomerProfileAppService
+    public interface IAddAddressAppService
     {
-        int Execute(EditCustomerInputModel model);
+        int Execute(AddAddressInputModel model);
     }
 }
