@@ -7,10 +7,10 @@ ILogoutAppService (Commands)
 (Customers)
 IRegisterCustomerProfileAppService
 IEditCustomerProfileAppService (Commands) --- Done
-IAddAddressAppService (Commands) --- 
-IAddOrderAppService (Commands)
-IGetListOfOrderDetailsAppService (Queries)
-IAcceptBidAppService (Commands)
+IAddAddressAppService (Commands) --- Done
+IAddOrderAppService (Commands) --- Done
+IGetListOfOrderDetailsAppService (Queries) --- Done with Ostad
+IAcceptBidAppService (Commands) 
 
 
 (Experts)

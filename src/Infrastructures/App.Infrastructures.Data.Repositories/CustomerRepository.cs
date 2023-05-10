@@ -61,6 +61,9 @@ namespace App.Infrastructures.Data.Repositories
             throw new NotImplementedException();
         }
 
-
+        public void AcceptBid(AcceptBidInputModel model)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
