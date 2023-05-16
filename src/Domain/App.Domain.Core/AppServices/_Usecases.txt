@@ -10,7 +10,7 @@ IEditCustomerProfileAppService (Commands) --- Done
 IAddAddressAppService (Commands) --- Done
 IAddOrderAppService (Commands) --- Done
 IGetListOfOrderDetailsAppService (Queries) --- Done with Ostad
-IAcceptBidAppService (Commands) 
+IAcceptBidAppService (Commands) --- Done
 
 
 (Experts)
